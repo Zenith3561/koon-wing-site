@@ -346,6 +346,7 @@ def page_home():
     <div class="section-head" style="margin-bottom:var(--gap-lg)">
       <p class="eyebrow">Design samples</p>
       <h2>What the finishes look like.</h2>
+      <p class="cn-sub">成品效果一覽</p>
       <p class="lead">A selection of design samples produced to show materials, plating and packaging
         options. These are demonstration pieces, not client work.</p>
     </div>
@@ -354,7 +355,7 @@ def page_home():
   </div>
 </section>
 
-{cta("Tell us what you need made.", "話我哋知你想做咩",
+{cta("Tell us what you need made.", "告訴我們您想製作的產品",
      "Send a sketch, a reference photo or a rough spec. We will come back with formats, "
      "finishes and an indicative quotation.")}
 """ + FOOTER
@@ -406,7 +407,7 @@ def page_products():
   <div class="container">{rows}
   </div>
 </section>
-{cta("Not sure which format fits?", "唔知揀邊種？",
+{cta("Not sure which format fits?", "不確定哪一款適合？",
      "Send us the budget, the quantity and who is receiving it. We will suggest two or three formats "
      "that work and quote them side by side.")}
 """ + FOOTER
@@ -465,7 +466,7 @@ def page_showcase():
   <p class="lb-cap"></p>
 </div>
 
-{cta("Want a sample in your own branding?", "想用你自己嘅品牌打樣？",
+{cta("Want a sample in your own branding?", "以貴公司品牌打樣",
      "We can produce a pre-production sample in your artwork and finish before you commit to a "
      "production run.")}
 """ + FOOTER
@@ -488,6 +489,7 @@ def page_about():
   <div class="container grid-2" style="align-items:start;gap:clamp(28px,5vw,72px)">
     <div>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">What we do</h2>
+      <p class="cn-sub">我們的業務</p>
       <p class="lead" style="margin-top:var(--gap-md)">Koon Wing Product takes a brand's idea for a
         physical gift and carries it through to boxed, delivered goods. That means artwork prepared to
         production spec, tooling cut, a physical sample approved, production placed with the right
@@ -537,22 +539,26 @@ def page_about():
     <div class="section-head">
       <p class="eyebrow">Straight answers</p>
       <h2>What you should ask us.</h2>
+      <p class="cn-sub">您應該向我們查證的事</p>
     </div>
     <div class="grid-3">
       <div class="feat"><h3>“Do you make it yourselves?”</h3>
+        <p class="cn-sub" style="margin:0">「產品是你們自己生產的嗎？」</p>
         <p>No. We design and manage; specialist partner factories produce. We stay responsible for the
           spec, the sample and the inspection.</p></div>
       <div class="feat"><h3>“What is the minimum order?”</h3>
+        <p class="cn-sub" style="margin:0">「最低訂購量是多少？」</p>
         <p>It depends entirely on the format and the tooling involved. Tell us the quantity you actually
           want and we will tell you honestly whether it is workable.</p></div>
       <div class="feat"><h3>“Are those your clients in the photos?”</h3>
+        <p class="cn-sub" style="margin:0">「相片中的是你們的客戶嗎？」</p>
         <p>No. Every brand name shown on this site is an illustrative design sample, produced to
           demonstrate finishes. We will not claim work we have not done.</p></div>
     </div>
   </div>
 </section>
 
-{cta("Start with a conversation.", "由一次傾談開始",
+{cta("Start with a conversation.", "由一次洽談開始",
      "No forms to fill in first. Send what you have — a sketch, a photo, a budget — and we will tell "
      "you what is realistic.")}
 """ + FOOTER
@@ -613,6 +619,7 @@ def page_partnership():
     <div>
       <p class="eyebrow">What we need from you</p>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">Four things get you a quote.</h2>
+      <p class="cn-sub">報價所需的四項資料</p>
       <table class="spec" style="margin-top:var(--gap-lg)">
         <tbody>
           <tr><th>1 · The object</th><td>A format, a sketch, or a reference photo of something similar</td></tr>
@@ -626,6 +633,7 @@ def page_partnership():
     <div>
       <p class="eyebrow">What you get back</p>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">A spec, a price and a real date.</h2>
+      <p class="cn-sub">規格、價格與實際交期</p>
       <p class="lead" style="margin-top:var(--gap-md)">A written specification of the piece as we would
         build it, an indicative unit price at your quantity, the tooling cost if any, and a production
         timeline with the sampling stage shown separately — because that is the stage that usually moves.</p>
@@ -635,7 +643,7 @@ def page_partnership():
   </div>
 </section>
 
-{cta("Let's scope your programme.", "一齊傾你嘅project",
+{cta("Let's scope your programme.", "共同規劃您的項目",
      "Tell us the object, the quantity, the deadline and the budget. You will get a specification and "
      "an indicative price back.")}
 """ + FOOTER
@@ -661,6 +669,7 @@ def page_contact():
   <div class="container grid-2" style="gap:clamp(28px,5vw,72px);align-items:start">
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">Send an enquiry</h2>
+      <p class="cn-sub">提交查詢</p>
       <p class="form-note" style="margin-top:var(--gap-sm)">Fields marked <em style="color:var(--accent);font-style:normal">*</em> are required.</p>
       <form action="#" method="post" novalidate>
         <div class="grid-2" style="gap:var(--gap-md)">
@@ -683,7 +692,7 @@ def page_contact():
         </div>
         <div class="field"><label for="deadline">Date needed in hand 到貨日期</label>
           <input id="deadline" name="deadline" type="text" placeholder="e.g. mid-November, Hong Kong"></div>
-        <div class="field"><label for="msg">What are you making? 你想做咩？ <em>*</em></label>
+        <div class="field"><label for="msg">What are you making? 產品內容 <em>*</em></label>
           <textarea id="msg" name="msg" required
             placeholder="Describe the piece, or paste a reference link. Budget per unit is helpful."></textarea></div>
         <button class="btn btn-primary" type="submit">Send enquiry</button>
@@ -695,6 +704,7 @@ def page_contact():
 
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">Direct</h2>
+      <p class="cn-sub">直接聯絡</p>
       <table class="spec" style="margin-top:var(--gap-md)">
         <tbody>
           <tr><th>Email 電郵</th><td>{TBC}</td></tr>
