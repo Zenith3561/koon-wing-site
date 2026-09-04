@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" rx="24" fill="#1B3A6B"/><g transform="translate(60 60) scale(.80) translate(-60 -60)"><g>
+    <path d="M 79.72 22.92 A 42.0 42.0 0 1 1 40.28 22.92" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" opacity=".55"/>
+    <circle cx="79.72" cy="22.92" r="5.4" fill="#E3C167"/>
+    <rect x="89.29" y="30.52" width="8.8" height="8.8" rx="1.2" fill="#FFFFFF" transform="rotate(45 93.69 34.92)"/>
+    <circle cx="101.18" cy="51.75" r="4.2" fill="none" stroke="#E3C167" stroke-width="2.2"/>
+    <circle cx="100.75" cy="70.16" r="5.4" fill="#E3C167"/>
+    <rect x="88.09" y="82.22" width="8.8" height="8.8" rx="1.2" fill="#FFFFFF" transform="rotate(45 92.49 86.62)"/>
+    <circle cx="77.97" cy="97.96" r="4.2" fill="none" stroke="#E3C167" stroke-width="2.2"/>
+    <circle cx="60.00" cy="102.00" r="5.4" fill="#E3C167"/>
+    <rect x="37.63" y="93.56" width="8.8" height="8.8" rx="1.2" fill="#FFFFFF" transform="rotate(45 42.03 97.96)"/>
+    <circle cx="27.51" cy="86.62" r="4.2" fill="none" stroke="#E3C167" stroke-width="2.2"/>
+    <circle cx="19.25" cy="70.16" r="5.4" fill="#E3C167"/>
+    <rect x="14.42" y="47.35" width="8.8" height="8.8" rx="1.2" fill="#FFFFFF" transform="rotate(45 18.82 51.75)"/>
+    <circle cx="26.31" cy="34.92" r="4.2" fill="none" stroke="#E3C167" stroke-width="2.2"/>
+    <circle cx="40.28" cy="22.92" r="5.4" fill="#E3C167"/>
+    <text x="60" y="60" text-anchor="middle" dominant-baseline="central" font-family="Iowan Old Style, Charter, Palatino Linotype, Georgia, serif" font-size="46" font-weight="600" fill="#FFFFFF">K</text>
+  </g></g></svg>
