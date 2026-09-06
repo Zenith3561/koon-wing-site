@@ -22,27 +22,41 @@ Nothing to compile — Vercel serves the folder as-is.
 
 ## Structure
 
+Two full language versions. English at the root, Chinese under `zh/`.
+Both carry the same content — a Chinese page is Chinese all the way down,
+not an English page with Chinese headings.
+
 ```
 site/
-├── index.html          Home
+├── index.html          Home            (English)
 ├── products.html       10 product formats, one row each
 ├── showcase.html       57 design samples, filter + lightbox
 ├── about.html          Who we are / how we work
 ├── partnership.html    OEM / ODM / private label
 ├── contact.html        Enquiry form + direct details
+├── zh/                 The same six pages, in Traditional Chinese
 ├── assets/
 │   ├── css/style.css   All styling; design tokens at the top of the file
 │   ├── js/main.js      Mobile nav, gallery filter, lightbox
 │   ├── img/            Logo (SVG) + favicon
 │   ├── products/       57 photos × 2 sizes, WebP
 │   └── manifest.json   Photo index used by the generator
-└── _build/build_site.py  Page generator (content lives in here)
+└── _build/build_site.py  Page generator — every string as an (en, zh) pair
 ```
+
+A visitor switches language with the EN / 中文 pill in the navigation, and
+each page declares the other language via `<link rel="alternate" hreflang>`
+so search engines index them as one site in two languages.
+
+Under a heading, the *other* language appears as a small secondary line.
+That is deliberate: it keeps the bilingual look of the design without
+leaving a page whose headings and body disagree.
 
 ## Editing content
 
-All copy lives in `_build/build_site.py` — the `SERIES`, `GROUPS` and `STEPS` lists plus the
-`page_*()` functions. Edit there and re-run:
+All copy lives in `_build/build_site.py`. Every string is written once as an English/Chinese
+pair — `t("English", "中文")` in the page functions, and `en=`/`zh=` blocks in the `SERIES`,
+`GROUPS` and `STEPS` lists. Edit there and re-run; both language versions regenerate together:
 
 ```bash
 python _build/build_site.py
