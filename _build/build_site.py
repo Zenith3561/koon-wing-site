@@ -306,7 +306,7 @@ def footer():
     <div class="footer-grid">
       <div>
         <img class="flogo" src="{A()}assets/img/logo-lockup-light.svg" alt="Koon Wing Product" width="200" height="78">
-        <p class="about">{t("Custom metal and plastic gifts, designed and managed from Macau — from first sketch to boxed delivery.", "於澳門設計及管理的訂製金屬與塑膠禮品——由第一張草圖，到裝盒交付。")}</p>
+        <p class="about">{t("Custom metal and plastic gifts, designed and managed from Macau and Hong Kong — from first sketch to boxed delivery.", "於澳門及香港設計及管理的訂製金屬與塑膠禮品——由第一張草圖，到裝盒交付。")}</p>
       </div>
       <div>
         <h4>{t("Products", "產品")}</h4>
@@ -403,16 +403,16 @@ def page_home():
 
     return head(t("Koon Wing Product · Custom Metal &amp; Plastic Gifts, Macau",
                   "冠榮製品 · 澳門訂製金屬及塑膠禮品"),
-                t("Macau design and production house for custom metal and plastic gifts — enamel "
+                t("Macau and Hong Kong design and production house for custom metal and plastic gifts — enamel "
                   "pins, keychains, coasters, drinkware and desk pieces. Design to boxed delivery.",
-                  "澳門的訂製金屬及塑膠禮品設計與生產公司——琺瑯襟章、匙扣、杯墊、飲品器具及桌上文儀用品，由設計到裝盒交付。"),
+                  "澳門及香港的訂製金屬及塑膠禮品設計與生產公司——琺瑯襟章、匙扣、杯墊、飲品器具及桌上文儀用品，由設計到裝盒交付。"),
                 "index.html") + f"""
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <p class="eyebrow">{t("Custom gifts · Macau", "訂製禮品 · 澳門")}</p>
+      <p class="eyebrow">{t("Custom gifts · Macau &amp; Hong Kong", "訂製禮品 · 澳門及香港")}</p>
       <h1>{h1}</h1>
-      <p class="lead">{t("Koon Wing Product designs and produces custom metal and plastic gifts from Macau — enamel pins, acrylic charms, coasters, barware and desk pieces. You bring the brand and the deadline; we handle artwork, tooling, sampling, production and packing.", "冠榮製品於澳門設計及生產訂製金屬與塑膠禮品——琺瑯襟章、亞加力吊飾、杯墊、酒具及桌上文儀用品。您提供品牌與交期，圖稿、開模、打樣、生產與包裝由我們負責。")}</p>
+      <p class="lead">{t("Koon Wing Product designs and produces custom metal and plastic gifts from Macau and Hong Kong — enamel pins, acrylic charms, coasters, barware and desk pieces. You bring the brand and the deadline; we handle artwork, tooling, sampling, production and packing.", "冠榮製品於澳門及香港設計及生產訂製金屬與塑膠禮品——琺瑯襟章、亞加力吊飾、杯墊、酒具及桌上文儀用品。您提供品牌與交期，圖稿、開模、打樣、生產與包裝由我們負責。")}</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="contact.html">{t("Request a Quote", "索取報價")}</a>
         <a class="btn btn-ghost" href="showcase.html">{t("See design samples →", "查看設計樣本 →")}</a>
@@ -420,7 +420,7 @@ def page_home():
       <div class="hero-meta">
         <span>{t("Metal · Enamel · Acrylic", "金屬 · 琺瑯 · 亞加力")}</span>
         <span>{t("Design to delivery", "由設計到交付")}</span>
-        <span>{t("Based in Macau", "澳門公司")}</span>
+        <span>{t("Macau &amp; Hong Kong", "澳門 · 香港")}</span>
       </div>
     </div>
     <figure class="hero-figure" style="margin:0">
@@ -449,9 +449,9 @@ def page_home():
       <h2>{t("Small enough to answer,<br>organised enough to deliver.", "規模夠小，回應夠快；<br>流程夠穩，交付夠準。")}</h2>
     </div>
     <div class="grid-4">
-      {feat("pencil", "Design done here", "設計在澳門完成",
-            "Artwork and structural design are handled in Macau, in your timezone, in Chinese or English.",
-            "圖稿與結構設計均在澳門處理，與您同一時區，中英文皆可溝通。")}
+      {feat("pencil", "Design done here", "設計在澳門及香港完成",
+            "Artwork and structural design are handled in Macau and Hong Kong, in your timezone, in Chinese or English.",
+            "圖稿與結構設計均在澳門及香港處理，與您同一時區，中英文皆可溝通。")}
       {feat("layers", "Vetted production partners", "經篩選的合作工廠",
             "We do not run a factory. We place work with specialist manufacturers and stay accountable for the result.",
             "我們不設自家工廠，而是把工作交予專門的製造商，並為最終成品負責。")}
@@ -621,7 +621,7 @@ def page_about():
         for en_h, zh_h, en_p, zh_p in faq)
 
     spec = [
-        ("Based in", "所在地", "Macau", "澳門"),
+        ("Based in", "所在地", "Macau &amp; Hong Kong", "澳門 · 香港"),
         ("Model", "經營模式",
          "Design and project management in Macau; production placed with partner factories",
          "設計及項目管理於澳門進行；生產交予合作工廠"),
@@ -653,7 +653,7 @@ def page_about():
     <div>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">{t("What we do", "我們的業務")}</h2>
       <p class="lead" style="margin-top:var(--gap-md)">{t("Koon Wing Product takes a brand's idea for a physical gift and carries it through to boxed, delivered goods. That means artwork prepared to production spec, tooling cut, a physical sample approved, production placed with the right specialist factory, and quality checked against the approved sample before shipping.", "冠榮製品把品牌對實體禮品的構想，一直做到裝盒交付為止。當中包括：按生產規格準備圖稿、開模、確認實物樣本、把生產交予合適的專門工廠，並在出貨前對照確認樣本檢查品質。")}</p>
-      <p class="lead" style="margin-top:var(--gap-md)">{t("We are deliberately direct about the model: <strong>we do not own a factory.</strong> We design and manage in Macau, and we place production with manufacturing partners in mainland China who specialise in the exact process a piece needs — die-striking and enamelling are not the same trade as acrylic casting or vacuum drinkware. Being independent of any single plant is what lets us put a job where it will come out best, rather than where it happens to fit.", "我們對經營模式說得很直接：<strong>我們沒有自己的工廠。</strong>設計與管理在澳門進行，生產則交予中國內地的合作工廠——衝壓與琺瑯，跟亞加力鑄造或真空保溫器具，本來就不是同一門手藝。正因為不隸屬任何單一工廠，我們才可以把每件工作交到最適合的地方，而不是硬塞進現成的產線。")}</p>
+      <p class="lead" style="margin-top:var(--gap-md)">{t("We are deliberately direct about the model: <strong>we do not own a factory.</strong> We design and manage across Macau and Hong Kong, and we place production with manufacturing partners in mainland China who specialise in the exact process a piece needs — die-striking and enamelling are not the same trade as acrylic casting or vacuum drinkware. Being independent of any single plant is what lets us put a job where it will come out best, rather than where it happens to fit.", "我們對經營模式說得很直接：<strong>我們沒有自己的工廠。</strong>設計與管理在澳門及香港進行，生產則交予中國內地的合作工廠——衝壓與琺瑯，跟亞加力鑄造或真空保溫器具，本來就不是同一門手藝。正因為不隸屬任何單一工廠，我們才可以把每件工作交到最適合的地方，而不是硬塞進現成的產線。")}</p>
     </div>
     <div>
       <figure style="margin:0">
@@ -792,7 +792,7 @@ def page_contact():
     opts = "".join(f"<option>{sname(s)}</option>" for s in SERIES)
     direct = [("Email", "電郵", MAIL),
               ("Address", "地址", t("Room 004, Block B, 7/F, Block 2, Nam Fong Industrial Building,<br>679 Avenida do Dr. Francisco Vieira Machado, Macau", "澳門馬揸度博士大馬路679號<br>南方工業大廈第2座7樓B座004室")),
-              ("Hours", "辦公時間", t("Monday – Friday, Macau time", "星期一至五，澳門時間"))]
+              ("Hours", "辦公時間", t("Monday – Friday, Macau time (GMT+8)", "星期一至五，澳門時間（GMT+8）"))]
     direct_html = "".join(f"<tr><th>{t(a, b)}</th><td>{c}</td></tr>" for a, b, c in direct)
 
     return head(t("Contact · Koon Wing Product", "聯絡我們 · 冠榮製品"),
