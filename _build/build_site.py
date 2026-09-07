@@ -242,6 +242,12 @@ def img(series, n, sm=False):
     return A() + (item["sm"] if sm else item["full"])
 
 
+def dim(series, n, sm=False):
+    """Real intrinsic size — a wrong height attribute stretches the image."""
+    item = MAN[series][n - 1]
+    return (item["sw"], item["sh"]) if sm else (item["w"], item["h"])
+
+
 def head(title, desc, page):
     lang = t("en", "zh-Hant")
     alt_en = ("" if LANG == "en" else "../") + page
@@ -373,7 +379,7 @@ def page_home():
         s, n = g["hero"]
         cards += f"""
       <a class="card" href="products.html#{g['members'][0]}">
-        <div class="card-media"><img src="{img(s, n, True)}" alt="{g[LANG]['name']}" loading="lazy" width="760" height="570"></div>
+        <div class="card-media"><img src="{img(s, n, True)}" alt="{g[LANG]['name']}" loading="lazy"></div>
         <div class="card-body">
           <span class="card-idx">{g['key'].upper()}</span>
           <h3>{g[LANG]['name']}</h3>
@@ -385,7 +391,7 @@ def page_home():
 
     strip = "".join(
         f'<a href="showcase.html" class="shot" style="display:block">'
-        f'<img src="{img(k, n, True)}" alt="{sname(BY_KEY[k])}" loading="lazy" width="760" height="570"></a>'
+        f'<img src="{img(k, n, True)}" alt="{sname(BY_KEY[k])}" loading="lazy"></a>'
         for k, n in [("lapel-pin", 6), ("bookmark", 4), ("coaster-acrylic", 3), ("flask", 5),
                      ("bottle-opener", 2), ("tie-clip", 1), ("coaster-metal", 4), ("keychain", 3)])
 
@@ -416,7 +422,7 @@ def page_home():
     </div>
     <figure class="hero-figure" style="margin:0">
       <img src="{img('lapel-pin', 3)}" alt="{t('Enamel lapel pin presented in a gift box', '琺瑯襟章連禮盒')}"
-           width="1400" height="1050" fetchpriority="high">
+           width="{dim('lapel-pin', 3)[0]}" height="{dim('lapel-pin', 3)[1]}" fetchpriority="high">
     </figure>
   </div>
 </section>
@@ -490,7 +496,7 @@ def page_products():
         n = len(MAN[s["key"]])
         pics = [1, 2, 3] if n >= 3 else list(range(1, n + 1))
         media = "".join(
-            f'<img src="{img(s["key"], p, True)}" alt="{sname(s)} {p}" loading="lazy" width="760" height="570">'
+            f'<img src="{img(s["key"], p, True)}" alt="{sname(s)} {p}" loading="lazy" width="{dim(s["key"], p, True)[0]}" height="{dim(s["key"], p, True)[1]}">'
             for p in pics)
         d = s[LANG]
         rows += f"""
@@ -546,7 +552,7 @@ def page_showcase():
             shots += f"""
       <figure class="shot" data-series="{s['key']}" data-full="{img(s['key'], n)}"
               data-caption="{cap}" tabindex="0" role="button" aria-label="{cap}">
-        <img src="{img(s['key'], n, True)}" alt="{cap}" loading="lazy" width="760" height="570">
+        <img src="{img(s['key'], n, True)}" alt="{cap}" loading="lazy" width="{dim(s['key'], n, True)[0]}" height="{dim(s['key'], n, True)[1]}">
         <figcaption>{sname(s)}</figcaption>
       </figure>"""
 
@@ -649,7 +655,8 @@ def page_about():
     <div>
       <figure style="margin:0">
         <img src="{img('bookmark', 4)}" alt="{t('Etched metal bookmark detail', '金屬蝕刻書籤細節')}"
-             style="border-radius:var(--radius-lg);width:100%" loading="lazy" width="1400" height="1050">
+             style="border-radius:var(--radius-lg);width:100%;height:auto" loading="lazy"
+             width="{dim('bookmark', 4)[0]}" height="{dim('bookmark', 4)[1]}">
       </figure>
       <table class="spec" style="margin-top:var(--gap-lg)"><tbody>{spec_html}</tbody></table>
     </div>
@@ -699,7 +706,7 @@ def page_partnership():
          "沿用我們既有的產品形式，換上您的品牌與包裝，供零售或長期供貨計劃使用。"),
     ]
     cards = "".join(f"""
-    <div class="card"><div class="card-media"><img src="{img(k, n, True)}" alt="{t(en_h, zh_h)}" loading="lazy" width="760" height="570"></div>
+    <div class="card"><div class="card-media"><img src="{img(k, n, True)}" alt="{t(en_h, zh_h)}" loading="lazy"></div>
       <div class="card-body"><span class="card-idx">{idx}</span><h3>{t(en_h, zh_h)}</h3>
         <p>{t(en_p, zh_p)}</p></div></div>"""
                     for idx, en_h, zh_h, (k, n), en_p, zh_p in modes)
@@ -839,7 +846,8 @@ def page_contact():
       <table class="spec" style="margin-top:var(--gap-md)"><tbody>{direct_html}</tbody></table>
       <figure style="margin:var(--gap-xl) 0 0">
         <img src="{img('lapel-pin', 1)}" alt="{t('Enamel lapel pin on slate', '琺瑯襟章')}"
-             style="border-radius:var(--radius-lg);width:100%" loading="lazy" width="1400" height="1050">
+             style="border-radius:var(--radius-lg);width:100%;height:auto" loading="lazy"
+             width="{dim('lapel-pin', 1)[0]}" height="{dim('lapel-pin', 1)[1]}">
       </figure>
     </div>
   </div>

@@ -24,7 +24,7 @@
 
   --gap-xs:8px; --gap-sm:12px; --gap-md:20px;
   --gap-lg:32px; --gap-xl:56px; --gap-2xl:96px;
-  --container:1180px; --gutter:40px;
+  --container:1260px; --gutter:40px;
   --radius:8px; --radius-lg:14px;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -32,6 +32,7 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);
   font-size:var(--fs-body);line-height:1.6;-webkit-font-smoothing:antialiased}
 img,svg{display:block;max-width:100%}
+img{height:auto}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
 p{text-wrap:pretty} h1,h2,h3,h4{text-wrap:balance}
@@ -56,7 +57,7 @@ h1{font-family:var(--font-display);font-size:var(--fs-h1);line-height:1.04;lette
 h2{font-family:var(--font-display);font-size:var(--fs-h2);line-height:1.12;letter-spacing:-.015em;font-weight:600;margin:0}
 h3{font-size:var(--fs-h3);font-weight:600;line-height:1.3;margin:0}
 .lead{font-size:var(--fs-lead);line-height:1.62;color:var(--muted);max-width:58ch;margin:0}
-.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+.eyebrow{font-family:var(--font-mono);font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--accent);margin:0 0 var(--gap-md);display:flex;align-items:center;gap:10px}
 .eyebrow::before{content:'';width:22px;height:1px;background:var(--accent-line);flex:none}
 .cn{font-family:var(--font-cn);font-weight:400}
@@ -85,7 +86,7 @@ h3{font-size:var(--fs-h3);font-weight:600;line-height:1.3;margin:0}
 .brand{display:flex;align-items:center;gap:11px;flex:none}
 .brand img{height:38px;width:auto}
 .brand-txt .mark{font-family:var(--font-display);font-size:19px;font-weight:600;letter-spacing:.02em;line-height:1.1}
-.brand-txt .sub{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.34em;color:var(--accent);line-height:1.1}
+.brand-txt .sub{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.3em;color:var(--accent);line-height:1.1}
 .topnav nav{display:flex;gap:26px;margin-left:auto;align-items:center}
 .navlink{display:flex;flex-direction:column;line-height:1.18;padding-block:4px}
 .navlink span:first-child{font-size:14px;font-weight:500}
@@ -116,7 +117,7 @@ h3{font-size:var(--fs-h3);font-weight:600;line-height:1.3;margin:0}
   aspect-ratio:4/3;box-shadow:0 24px 60px -34px rgba(27,58,107,.5)}
 .hero-figure img{width:100%;height:100%;object-fit:cover}
 .hero-meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:var(--gap-lg);
-  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  font-family:var(--font-mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .hero-meta span{display:flex;align-items:center;gap:7px}
 .hero-meta span::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none}
 
@@ -133,10 +134,10 @@ a.card:hover{border-color:var(--accent-line);box-shadow:0 18px 44px -30px rgba(2
 .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
 a.card:hover .card-media img{transform:scale(1.035)}
 .card-body{padding:var(--gap-md);display:flex;flex-direction:column;gap:8px;flex:1}
-.card-idx{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--accent)}
+.card-idx{font-family:var(--font-mono);font-size:12px;letter-spacing:.11em;color:var(--accent)}
 .card p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:var(--gap-sm)}
-.tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);
+.tag{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted);
   border:1px solid var(--border);border-radius:4px;padding:3px 7px}
 
 /* ─ feature list ─ */
@@ -152,7 +153,7 @@ a.card:hover .card-media img{transform:scale(1.035)}
 @media(max-width:560px){.steps{grid-template-columns:1fr}}
 .step{position:relative;padding-top:var(--gap-md)}
 .step::before{content:'';position:absolute;top:-1px;left:0;width:26px;height:2px;background:var(--accent)}
-.step .n{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--muted)}
+.step .n{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.11em;color:var(--muted)}
 .step h3{font-size:16.5px;margin-top:6px}
 .step p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
 
@@ -183,7 +184,7 @@ a.card:hover .card-media img{transform:scale(1.035)}
 .lb.on{display:flex}
 .lb img{width:auto;max-width:100%;height:auto;max-height:min(82dvh,82vh);border-radius:var(--radius)}
 .lb-cap{position:absolute;left:0;right:0;bottom:16px;text-align:center;color:#fff;
-  font-family:var(--font-mono);font-size:12px;letter-spacing:.1em}
+  font-family:var(--font-mono);font-size:13px;letter-spacing:.08em}
 .lb-btn{position:absolute;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
   color:#fff;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;font-size:20px;line-height:1}
 .lb-btn:hover{background:rgba(255,255,255,.2)}
@@ -193,28 +194,30 @@ a.card:hover .card-media img{transform:scale(1.035)}
 /* ─ spec table ─ */
 .spec{width:100%;border-collapse:collapse;font-size:14.5px}
 .spec th,.spec td{text-align:left;padding:11px 0;border-bottom:1px solid var(--border);vertical-align:top}
-.spec th{width:36%;font-weight:500;color:var(--muted);font-size:13.5px}
+.spec th{width:36%;font-weight:500;color:var(--muted);font-size:14px}
 
 /* ─ product detail rows ─ */
-.prow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;
+.prow{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(24px,4vw,56px);align-items:center;
   padding-block:clamp(34px,5vw,60px);border-bottom:1px solid var(--border)}
 .prow:last-child{border-bottom:0}
-@media(max-width:920px){.prow{grid-template-columns:1fr}}
-.prow-media{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.prow-media img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border)}
-.prow-media img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+@media(max-width:920px){.prow{grid-template-columns:1fr}
+  .prow-media{aspect-ratio:16/10}}
+.prow-media{display:grid;grid-template-columns:1.9fr 1fr;grid-template-rows:1fr 1fr;
+  gap:10px;aspect-ratio:15/11}
+.prow-media img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);border:1px solid var(--border)}
+.prow-media img:first-child{grid-row:1/3}
 .prow.rev .prow-body{order:-1}
 @media(max-width:920px){.prow.rev .prow-body{order:0}}
 
 /* ─ form ─ */
 .field{display:flex;flex-direction:column;gap:7px;margin-bottom:var(--gap-md)}
-.field label{font-size:13.5px;font-weight:500}
+.field label{font-size:14px;font-weight:500}
 .field label em{font-style:normal;color:var(--accent)}
 .field input,.field select,.field textarea{font:inherit;font-size:15px;color:var(--fg);
   border:1px solid var(--border);border-radius:var(--radius);padding:11px 13px;background:var(--surface);width:100%}
 .field textarea{min-height:132px;resize:vertical}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
-.form-note{font-size:13px;color:var(--muted);margin:0 0 var(--gap-md)}
+.form-note{font-size:13.5px;color:var(--muted);margin:0 0 var(--gap-md)}
 
 /* ─ CTA band ─ */
 .cta{background:var(--fg);color:#fff;border-radius:var(--radius-lg);padding:clamp(30px,5vw,58px);
@@ -230,23 +233,23 @@ a.card:hover .card-media img{transform:scale(1.035)}
 @media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 .footer img.flogo{height:78px;width:auto;margin-bottom:var(--gap-md)}
-.footer h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+.footer h4{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;
   color:var(--accent-hi);margin:0 0 var(--gap-sm);font-weight:400}
 .footer ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14.5px}
 .footer .about{color:var(--on-navy-dim);font-size:14.5px;line-height:1.6;margin:0;max-width:34ch}
 .footer-base{border-top:1px solid rgba(255,255,255,.14);margin-top:var(--gap-xl);padding-top:var(--gap-md);
   display:flex;justify-content:space-between;gap:var(--gap-md);flex-wrap:wrap;
-  font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:var(--on-navy-dim)}
+  font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--on-navy-dim)}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* placeholder awaiting client-supplied detail */
-.tbc{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--muted);
+.tbc{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.04em;color:var(--muted);
   border:1px dashed var(--border);border-radius:4px;padding:2px 7px;display:inline-block}
 .footer .tbc{color:var(--on-navy-dim);border-color:rgba(255,255,255,.25)}
 
 /* ─ language switch ─ */
-.langswitch{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;color:var(--muted);
+.langswitch{font-family:var(--font-mono);font-size:12.5px;letter-spacing:.1em;color:var(--muted);
   border:1px solid var(--border);border-radius:100px;padding:6px 13px;line-height:1;white-space:nowrap}
 .langswitch:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:980px){.topnav.open .langswitch{display:inline-block;margin-top:16px;text-align:center;align-self:flex-start}}
@@ -265,3 +268,16 @@ html[lang^="zh"] .cn-sub{font-family:var(--font-body);letter-spacing:.04em}
      so a nav link states one language and the switch handles the other) ─ */
 .navlink{justify-content:center}
 .navlink span:first-child{font-size:14.5px}
+
+/* ─ labels on Chinese pages: the mono face carries no Han glyphs, so these
+     fall back unpredictably and read small. Bind and nudge up. ─ */
+html[lang^="zh"] .eyebrow{font-family:var(--font-cn);font-size:14px;letter-spacing:.14em}
+html[lang^="zh"] .hero-meta{font-family:var(--font-cn);font-size:13px;letter-spacing:.1em;text-transform:none}
+html[lang^="zh"] .step .n{font-family:var(--font-cn);font-size:13px;letter-spacing:.1em}
+html[lang^="zh"] .footer h4{font-family:var(--font-cn);font-size:13px;letter-spacing:.14em}
+html[lang^="zh"] .tag{font-family:var(--font-cn);font-size:12.5px}
+html[lang^="zh"] .spec th{font-size:14.5px}
+
+/* ─ product row: let the description use the column width it has ─ */
+.prow-body .lead{max-width:none}
+.prow-body .btn-row{margin-top:var(--gap-md)}

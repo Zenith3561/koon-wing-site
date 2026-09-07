@@ -4,37 +4,49 @@
    "full": "assets/products/lapel-pin/01.webp",
    "sm": "assets/products/lapel-pin/01-sm.webp",
    "w": 1400,
-   "h": 764
+   "h": 764,
+   "sw": 760,
+   "sh": 415
   },
   {
    "full": "assets/products/lapel-pin/02.webp",
    "sm": "assets/products/lapel-pin/02-sm.webp",
    "w": 1400,
-   "h": 764
+   "h": 764,
+   "sw": 760,
+   "sh": 415
   },
   {
    "full": "assets/products/lapel-pin/03.webp",
    "sm": "assets/products/lapel-pin/03-sm.webp",
    "w": 1024,
-   "h": 1024
+   "h": 1024,
+   "sw": 760,
+   "sh": 760
   },
   {
    "full": "assets/products/lapel-pin/04.webp",
    "sm": "assets/products/lapel-pin/04-sm.webp",
    "w": 1400,
-   "h": 764
+   "h": 764,
+   "sw": 760,
+   "sh": 415
   },
   {
    "full": "assets/products/lapel-pin/05.webp",
    "sm": "assets/products/lapel-pin/05-sm.webp",
    "w": 1400,
-   "h": 764
+   "h": 764,
+   "sw": 760,
+   "sh": 415
   },
   {
    "full": "assets/products/lapel-pin/06.webp",
    "sm": "assets/products/lapel-pin/06-sm.webp",
    "w": 1400,
-   "h": 764
+   "h": 764,
+   "sw": 760,
+   "sh": 415
   }
  ],
  "keychain": [
@@ -42,25 +54,33 @@
    "full": "assets/products/keychain/01.webp",
    "sm": "assets/products/keychain/01-sm.webp",
    "w": 1400,
-   "h": 782
+   "h": 782,
+   "sw": 760,
+   "sh": 425
   },
   {
    "full": "assets/products/keychain/02.webp",
    "sm": "assets/products/keychain/02-sm.webp",
    "w": 1400,
-   "h": 782
+   "h": 782,
+   "sw": 760,
+   "sh": 425
   },
   {
    "full": "assets/products/keychain/03.webp",
    "sm": "assets/products/keychain/03-sm.webp",
    "w": 1400,
-   "h": 782
+   "h": 782,
+   "sw": 760,
+   "sh": 425
   },
   {
    "full": "assets/products/keychain/04.webp",
    "sm": "assets/products/keychain/04-sm.webp",
    "w": 1400,
-   "h": 782
+   "h": 782,
+   "sw": 760,
+   "sh": 425
   }
  ],
  "tie-clip": [
@@ -68,31 +88,41 @@
    "full": "assets/products/tie-clip/01.webp",
    "sm": "assets/products/tie-clip/01-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/tie-clip/02.webp",
    "sm": "assets/products/tie-clip/02-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/tie-clip/03.webp",
    "sm": "assets/products/tie-clip/03-sm.webp",
    "w": 1280,
-   "h": 853
+   "h": 853,
+   "sw": 760,
+   "sh": 506
   },
   {
    "full": "assets/products/tie-clip/04.webp",
    "sm": "assets/products/tie-clip/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/tie-clip/05.webp",
    "sm": "assets/products/tie-clip/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "pen": [
@@ -100,31 +130,41 @@
    "full": "assets/products/pen/01.webp",
    "sm": "assets/products/pen/01-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/pen/02.webp",
    "sm": "assets/products/pen/02-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/pen/03.webp",
    "sm": "assets/products/pen/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/pen/04.webp",
    "sm": "assets/products/pen/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/pen/05.webp",
    "sm": "assets/products/pen/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "bookmark": [
@@ -132,37 +172,49 @@
    "full": "assets/products/bookmark/01.webp",
    "sm": "assets/products/bookmark/01-sm.webp",
    "w": 1280,
-   "h": 731
+   "h": 731,
+   "sw": 760,
+   "sh": 434
   },
   {
    "full": "assets/products/bookmark/02.webp",
    "sm": "assets/products/bookmark/02-sm.webp",
    "w": 1280,
-   "h": 731
+   "h": 731,
+   "sw": 760,
+   "sh": 434
   },
   {
    "full": "assets/products/bookmark/03.webp",
    "sm": "assets/products/bookmark/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bookmark/04.webp",
    "sm": "assets/products/bookmark/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bookmark/05.webp",
    "sm": "assets/products/bookmark/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bookmark/06.webp",
    "sm": "assets/products/bookmark/06-sm.webp",
    "w": 1280,
-   "h": 1280
+   "h": 1280,
+   "sw": 760,
+   "sh": 760
   }
  ],
  "bottle-opener": [
@@ -170,37 +222,49 @@
    "full": "assets/products/bottle-opener/01.webp",
    "sm": "assets/products/bottle-opener/01-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bottle-opener/02.webp",
    "sm": "assets/products/bottle-opener/02-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bottle-opener/03.webp",
    "sm": "assets/products/bottle-opener/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bottle-opener/04.webp",
    "sm": "assets/products/bottle-opener/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bottle-opener/05.webp",
    "sm": "assets/products/bottle-opener/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/bottle-opener/06.webp",
    "sm": "assets/products/bottle-opener/06-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "coaster-metal": [
@@ -208,43 +272,57 @@
    "full": "assets/products/coaster-metal/01.webp",
    "sm": "assets/products/coaster-metal/01-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/02.webp",
    "sm": "assets/products/coaster-metal/02-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/03.webp",
    "sm": "assets/products/coaster-metal/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/04.webp",
    "sm": "assets/products/coaster-metal/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/05.webp",
    "sm": "assets/products/coaster-metal/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/06.webp",
    "sm": "assets/products/coaster-metal/06-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-metal/07.webp",
    "sm": "assets/products/coaster-metal/07-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "coaster-enamel": [
@@ -252,37 +330,49 @@
    "full": "assets/products/coaster-enamel/01.webp",
    "sm": "assets/products/coaster-enamel/01-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-enamel/02.webp",
    "sm": "assets/products/coaster-enamel/02-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-enamel/03.webp",
    "sm": "assets/products/coaster-enamel/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-enamel/04.webp",
    "sm": "assets/products/coaster-enamel/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-enamel/05.webp",
    "sm": "assets/products/coaster-enamel/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-enamel/06.webp",
    "sm": "assets/products/coaster-enamel/06-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "coaster-acrylic": [
@@ -290,43 +380,57 @@
    "full": "assets/products/coaster-acrylic/01.webp",
    "sm": "assets/products/coaster-acrylic/01-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/02.webp",
    "sm": "assets/products/coaster-acrylic/02-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/03.webp",
    "sm": "assets/products/coaster-acrylic/03-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/04.webp",
    "sm": "assets/products/coaster-acrylic/04-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/05.webp",
    "sm": "assets/products/coaster-acrylic/05-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/06.webp",
    "sm": "assets/products/coaster-acrylic/06-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/coaster-acrylic/07.webp",
    "sm": "assets/products/coaster-acrylic/07-sm.webp",
    "w": 1280,
-   "h": 714
+   "h": 714,
+   "sw": 760,
+   "sh": 424
   }
  ],
  "flask": [
@@ -334,31 +438,41 @@
    "full": "assets/products/flask/01.webp",
    "sm": "assets/products/flask/01-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/flask/02.webp",
    "sm": "assets/products/flask/02-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/flask/03.webp",
    "sm": "assets/products/flask/03-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/flask/04.webp",
    "sm": "assets/products/flask/04-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   },
   {
    "full": "assets/products/flask/05.webp",
    "sm": "assets/products/flask/05-sm.webp",
    "w": 1400,
-   "h": 781
+   "h": 781,
+   "sw": 760,
+   "sh": 424
   }
  ]
 }
