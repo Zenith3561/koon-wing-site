@@ -281,3 +281,11 @@ html[lang^="zh"] .spec th{font-size:14.5px}
 /* ─ product row: let the description use the column width it has ─ */
 .prow-body .lead{max-width:none}
 .prow-body .btn-row{margin-top:var(--gap-md)}
+
+/* ─ enquiry form: honeypot stays in the DOM but out of sight and out of
+     the tab order; a bot fills it, a person never sees it ─ */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{margin:var(--gap-md) 0 0;padding:12px 15px;border-radius:var(--radius);font-size:14.5px}
+.form-status.ok{background:color-mix(in oklch,#1a7f5a 12%,transparent);
+  border:1px solid color-mix(in oklch,#1a7f5a 45%,transparent);color:#14603f}
+.form-status.err{background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--fg)}

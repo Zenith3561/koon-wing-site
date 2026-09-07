@@ -837,10 +837,15 @@ def page_contact():
         <div class="field"><label for="msg">{t("What are you making?", "產品內容")} <em>*</em></label>
           <textarea id="msg" name="msg" required
             placeholder="{t('Describe the piece, or paste a reference link. Budget per unit is helpful.', '描述產品，或貼上參考連結。註明每件預算會更有幫助。')}"></textarea></div>
+        <div class="hp" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
         <button class="btn btn-primary" type="submit">{t("Send enquiry", "提交查詢")}</button>
+        <p class="form-status" role="status" aria-live="polite" hidden></p>
         <p class="form-note" style="margin-top:var(--gap-md)">
-          {t("This opens your email app with the details filled in, addressed to", "此表格會開啟您的電郵程式並自動填入內容，收件地址為")}
-          <a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a>{t(". You can also write to us directly.", "。您亦可直接來信。")}</p>
+          {t("We usually reply within one business day. You can also write to us directly at", "我們通常於一個工作天內回覆。您亦可直接來信")}
+          <a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a>{t(".", "。")}</p>
       </form>
     </div>
 
