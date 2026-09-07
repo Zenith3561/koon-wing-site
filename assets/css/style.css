@@ -260,3 +260,8 @@ html[lang^="zh"] h2{font-size:clamp(24px,3vw,38px)}
 html[lang^="zh"] .lead{line-height:1.78}
 html[lang^="zh"] body{line-height:1.75}
 html[lang^="zh"] .cn-sub{font-family:var(--font-body);letter-spacing:.04em}
+
+/* ─ single-language nav (the site now ships two full language versions,
+     so a nav link states one language and the switch handles the other) ─ */
+.navlink{justify-content:center}
+.navlink span:first-child{font-size:14.5px}

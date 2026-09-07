@@ -267,7 +267,7 @@ def head(title, desc, page):
 def nav(page):
     links = "".join(
         f'\n        <a class="navlink" href="{h}"{" aria-current=page" if h == page else ""}>'
-        f'<span>{t(en, zh)}</span><span class="cn">{o(en, zh)}</span></a>'
+        f'<span>{t(en, zh)}</span></a>'
         for h, en, zh in NAV)
     switch_href = ("zh/" + page) if LANG == "en" else ("../" + page)
     switch_label = t("中文", "EN")
@@ -339,7 +339,6 @@ def cta(en_h, zh_h, en_p, zh_p):
     <div class="cta">
       <div>
         <h2>{t(en_h, zh_h)}</h2>
-        <p class="cn-sub" style="color:var(--accent-hi)">{o(en_h, zh_h)}</p>
         <p>{t(en_p, zh_p)}</p>
       </div>
       <div class="btn-row" style="margin:0">
@@ -354,7 +353,7 @@ def cta(en_h, zh_h, en_p, zh_p):
 def feat(icon, en_h, zh_h, en_p, zh_p):
     return f"""<div class="feat">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">{ICONS[icon]}</svg>
-      <h3>{t(en_h, zh_h)}</h3><p class="cn-sub" style="margin:0">{o(en_h, zh_h)}</p><p>{t(en_p, zh_p)}</p>
+      <h3>{t(en_h, zh_h)}</h3><p>{t(en_p, zh_p)}</p>
     </div>"""
 
 
@@ -362,7 +361,7 @@ def steps_html():
     return "".join(
         f'<div class="step"><span class="n">{t("STEP", "階段")} {n}</span>'
         f'<h3>{t(en_h, zh_h)}</h3>'
-        f'<p class="cn-sub" style="margin:4px 0 0">{o(en_h, zh_h)}</p>'
+        f''
         f'<p>{t(en_p, zh_p)}</p></div>'
         for n, en_h, zh_h, en_p, zh_p in STEPS)
 
@@ -404,7 +403,6 @@ def page_home():
     <div>
       <p class="eyebrow">{t("Custom gifts · Hong Kong", "訂製禮品 · 香港")}</p>
       <h1>{h1}</h1>
-      <p class="cn-sub" style="font-size:16px;letter-spacing:.18em">{o("Custom metal &amp; plastic gifts · design to delivery", "訂製金屬及塑膠禮品 · 由設計到出貨")}</p>
       <p class="lead">{t("Koon Wing Product designs and produces custom metal and plastic gifts from Hong Kong — enamel pins, acrylic charms, coasters, barware and desk pieces. You bring the brand and the deadline; we handle artwork, tooling, sampling, production and packing.", "冠榮製品於香港設計及生產訂製金屬與塑膠禮品——琺瑯襟章、亞加力吊飾、杯墊、酒具及桌上文儀用品。您提供品牌與交期，圖稿、開模、打樣、生產與包裝由我們負責。")}</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="contact.html">{t("Request a Quote", "索取報價")}</a>
@@ -428,7 +426,6 @@ def page_home():
     <div class="section-head">
       <p class="eyebrow">{t("What we make", "我們生產什麼")}</p>
       <h2>{t("Three families,<br>one production standard.", "三大系列，<br>同一生產標準。")}</h2>
-      <p class="cn-sub">{o("Three families, one production standard", "三大系列 · 同一生產標準")}</p>
       <p class="lead">{t("Most programmes are built from these formats — on their own, or combined into a matched gift set that shares one artwork and one finish.", "多數禮品計劃都由這些形式組成——可以單獨使用，也可以組成共用同一圖稿與同一表面處理的配套禮盒。")}</p>
     </div>
     <div class="grid-3">{cards}
@@ -441,7 +438,6 @@ def page_home():
     <div class="section-head">
       <p class="eyebrow">{t("Why Koon Wing", "為何選擇冠榮")}</p>
       <h2>{t("Small enough to answer,<br>organised enough to deliver.", "規模夠小，回應夠快；<br>流程夠穩，交付夠準。")}</h2>
-      <p class="cn-sub">{o("Small enough to answer, organised enough to deliver", "回應快 · 交付穩")}</p>
     </div>
     <div class="grid-4">
       {feat("pencil", "Design done here", "設計在香港完成",
@@ -465,7 +461,6 @@ def page_home():
     <div class="section-head">
       <p class="eyebrow">{t("How we work", "我們的流程")}</p>
       <h2>{t("From sketch to packed carton.", "由草圖到裝箱出貨。")}</h2>
-      <p class="cn-sub">{o("From sketch to packed carton", "由概念到出貨 · 五個階段")}</p>
     </div>
     <div class="steps">{steps_html()}</div>
   </div>
@@ -476,7 +471,6 @@ def page_home():
     <div class="section-head" style="margin-bottom:var(--gap-lg)">
       <p class="eyebrow">{t("Design samples", "設計樣本")}</p>
       <h2>{t("What the finishes look like.", "實際成品效果。")}</h2>
-      <p class="cn-sub">{o("What the finishes look like", "成品效果一覽")}</p>
       <p class="lead">{t("A selection of design samples produced to show materials, plating and packaging options. These are demonstration pieces, not client work.", "以下為一批設計樣本，用以展示材質、電鍍與包裝的選擇。這些是示範用的樣本，並非客戶個案。")}</p>
     </div>
     <div class="gallery" style="grid-template-columns:repeat(auto-fill,minmax(190px,1fr))">{strip}</div>
@@ -527,7 +521,6 @@ def page_products():
   <div class="container">
     <p class="eyebrow">{t("Our products", "我們的產品")}</p>
     <h1>{t("Ten formats we build most often.", "我們最常生產的十種形式。")}</h1>
-    <p class="cn-sub" style="font-size:15px">{o("Ten formats we build most often", "我們的產品系列")}</p>
     <p class="lead">{t("Each format below can be made to your artwork, your finish and your packaging. Specifications listed are the common build and the options available — final specification is confirmed on your sample before production.", "以下每一種形式，均可按您的圖稿、表面處理與包裝製作。所列規格為常見結構及可選項目，最終規格於樣本確認階段落實。")}</p>
   </div>
 </section>
@@ -567,7 +560,6 @@ def page_showcase():
   <div class="container">
     <p class="eyebrow">{t("Design samples", "設計樣本")}</p>
     <h1>{t("Finishes, materials<br>and packaging.", "表面處理、材質<br>與包裝。")}</h1>
-    <p class="cn-sub" style="font-size:15px">{o("Finishes, materials and packaging", "設計樣本")}</p>
     <p class="lead">{t(f"{total} sample images across ten formats, produced to demonstrate what each material, plating and packaging option looks like in the hand.", f"共 {total} 張樣本圖片，涵蓋十種產品形式，用以展示各種材質、電鍍與包裝在實物上的效果。")}</p>
     <div class="notice" style="margin-top:var(--gap-lg);max-width:62ch">
       <svg viewBox="0 0 24 24" aria-hidden="true">{ICONS['info']}</svg>
@@ -615,7 +607,7 @@ def page_about():
     ]
     faq_html = "".join(
         f'<div class="feat"><h3>{t(en_h, zh_h)}</h3>'
-        f'<p class="cn-sub" style="margin:0">{o(en_h, zh_h)}</p>'
+        f''
         f'<p>{t(en_p, zh_p)}</p></div>'
         for en_h, zh_h, en_p, zh_p in faq)
 
@@ -644,7 +636,6 @@ def page_about():
   <div class="container">
     <p class="eyebrow">{t("About us", "關於我們")}</p>
     <h1>{t("A Hong Kong design<br>and sourcing house.", "一間香港的設計<br>與採購公司。")}</h1>
-    <p class="cn-sub" style="font-size:15px">{o("A Hong Kong design and sourcing house", "關於我們")}</p>
   </div>
 </section>
 
@@ -652,7 +643,6 @@ def page_about():
   <div class="container grid-2" style="align-items:start;gap:clamp(28px,5vw,72px)">
     <div>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">{t("What we do", "我們的業務")}</h2>
-      <p class="cn-sub">{o("What we do", "我們的業務")}</p>
       <p class="lead" style="margin-top:var(--gap-md)">{t("Koon Wing Product takes a brand's idea for a physical gift and carries it through to boxed, delivered goods. That means artwork prepared to production spec, tooling cut, a physical sample approved, production placed with the right specialist factory, and quality checked against the approved sample before shipping.", "冠榮製品把品牌對實體禮品的構想，一直做到裝盒交付為止。當中包括：按生產規格準備圖稿、開模、確認實物樣本、把生產交予合適的專門工廠，並在出貨前對照確認樣本檢查品質。")}</p>
       <p class="lead" style="margin-top:var(--gap-md)">{t("We are deliberately direct about the model: <strong>we do not own a factory.</strong> We design and manage in Hong Kong, and we place production with manufacturing partners in mainland China who specialise in the exact process a piece needs — die-striking and enamelling are not the same trade as acrylic casting or vacuum drinkware. Being independent of any single plant is what lets us put a job where it will come out best, rather than where it happens to fit.", "我們對經營模式說得很直接：<strong>我們沒有自己的工廠。</strong>設計與管理在香港進行，生產則交予中國內地的合作工廠——衝壓與琺瑯，跟亞加力鑄造或真空保溫器具，本來就不是同一門手藝。正因為不隸屬任何單一工廠，我們才可以把每件工作交到最適合的地方，而不是硬塞進現成的產線。")}</p>
     </div>
@@ -671,7 +661,6 @@ def page_about():
     <div class="section-head">
       <p class="eyebrow">{t("How we work", "我們的流程")}</p>
       <h2>{t("Five stages, one approved sample.", "五個階段，一個確認樣本。")}</h2>
-      <p class="cn-sub">{o("Five stages, one approved sample", "五個階段 · 一個確認樣本")}</p>
       <p class="lead">{t("The approved physical sample is the contract. Everything produced afterwards is checked against it, which is what stops the familiar problem of goods arriving a shade off, a gram light, or in the wrong box.", "確認的實物樣本就等於合約。其後生產的一切都以它為準——這正是避免貨品到手時顏色差一點、重量輕一點、或者換了包裝盒的關鍵。")}</p>
     </div>
     <div class="steps">{steps_html()}</div>
@@ -683,7 +672,6 @@ def page_about():
     <div class="section-head">
       <p class="eyebrow">{t("Straight answers", "坦白回答")}</p>
       <h2>{t("What you should ask us.", "您應該向我們查證的事。")}</h2>
-      <p class="cn-sub">{o("What you should ask us", "您應該向我們查證的事")}</p>
     </div>
     <div class="grid-3">{faq_html}</div>
   </div>
@@ -713,7 +701,6 @@ def page_partnership():
     cards = "".join(f"""
     <div class="card"><div class="card-media"><img src="{img(k, n, True)}" alt="{t(en_h, zh_h)}" loading="lazy" width="760" height="570"></div>
       <div class="card-body"><span class="card-idx">{idx}</span><h3>{t(en_h, zh_h)}</h3>
-        <p class="cn-sub" style="margin:0">{o(en_h, zh_h)}</p>
         <p>{t(en_p, zh_p)}</p></div></div>"""
                     for idx, en_h, zh_h, (k, n), en_p, zh_p in modes)
 
@@ -736,7 +723,6 @@ def page_partnership():
   <div class="container">
     <p class="eyebrow">{t("Business partnerships", "商業合作")}</p>
     <h1>{t("Ways of working<br>together.", "合作方式。")}</h1>
-    <p class="cn-sub" style="font-size:15px">{o("Ways of working together", "商業合作機會")}</p>
     <p class="lead">{t("Whether you need one gift for one campaign or an ongoing range carrying your own label, the process is the same — the difference is how much of it you want to own.", "無論是單次推廣的一款禮品，還是掛上貴公司品牌的長期系列，流程都一樣——分別只在於您希望掌握多少。")}</p>
   </div>
 </section>
@@ -751,7 +737,6 @@ def page_partnership():
     <div class="section-head">
       <p class="eyebrow">{t("Who this suits", "適合的對象")}</p>
       <h2>{t("Buyers we are built for.", "我們適合服務的買家。")}</h2>
-      <p class="cn-sub">{o("Buyers we are built for", "我們適合服務的買家")}</p>
     </div>
     <div class="grid-4">
       {feat("box", "Corporate gifting", "企業禮品",
@@ -775,14 +760,12 @@ def page_partnership():
     <div>
       <p class="eyebrow">{t("What we need from you", "我們需要的資料")}</p>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">{t("Four things get you a quote.", "四項資料，即可報價。")}</h2>
-      <p class="cn-sub">{o("Four things get you a quote", "報價所需的四項資料")}</p>
       <table class="spec" style="margin-top:var(--gap-lg)"><tbody>{need_html}</tbody></table>
       <div class="btn-row"><a class="btn btn-primary" href="contact.html">{t("Send an enquiry", "提交查詢")}</a></div>
     </div>
     <div>
       <p class="eyebrow">{t("What you get back", "您會收到什麼")}</p>
       <h2 style="font-size:clamp(24px,2.8vw,34px)">{t("A spec, a price and a real date.", "規格、價格與實際交期。")}</h2>
-      <p class="cn-sub">{o("A spec, a price and a real date", "規格、價格與實際交期")}</p>
       <p class="lead" style="margin-top:var(--gap-md)">{t("A written specification of the piece as we would build it, an indicative unit price at your quantity, the tooling cost if any, and a production timeline with the sampling stage shown separately — because that is the stage that usually moves.", "一份書面規格，說明我們會如何製作；按您數量計算的初步單價；如需開模則列明模具費；以及一份把打樣階段獨立列出的生產時間表——因為打樣正是最常變動的一環。")}</p>
       <p class="lead" style="margin-top:var(--gap-md)">{t("If your quantity or deadline is not workable, we will say so at that point rather than after you have paid a deposit.", "如果您的數量或交期並不可行，我們會在這個階段直說，而不是等您付了訂金之後才講。")}</p>
     </div>
@@ -812,7 +795,6 @@ def page_contact():
   <div class="container">
     <p class="eyebrow">{t("Contact us", "聯絡我們")}</p>
     <h1>{t("Tell us what<br>you need made.", "告訴我們<br>您想製作什麼。")}</h1>
-    <p class="cn-sub" style="font-size:15px">{o("Tell us what you need made", "聯絡我們")}</p>
     <p class="lead">{t("The more of the four basics you can give us — object, quantity, deadline, budget — the more useful the first reply will be.", "四項基本資料——產品、數量、交期、預算——提供得越齊全，我們第一次回覆就越有用。")}</p>
   </div>
 </section>
@@ -821,7 +803,6 @@ def page_contact():
   <div class="container grid-2" style="gap:clamp(28px,5vw,72px);align-items:start">
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">{t("Send an enquiry", "提交查詢")}</h2>
-      <p class="cn-sub">{o("Send an enquiry", "提交查詢")}</p>
       <p class="form-note" style="margin-top:var(--gap-sm)">{t("Fields marked", "標示")} <em style="color:var(--accent);font-style:normal">*</em> {t("are required.", "的欄位為必填。")}</p>
       <form action="#" method="post" novalidate>
         <div class="grid-2" style="gap:var(--gap-md)">
@@ -855,7 +836,6 @@ def page_contact():
 
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">{t("Direct", "直接聯絡")}</h2>
-      <p class="cn-sub">{o("Direct", "直接聯絡")}</p>
       <table class="spec" style="margin-top:var(--gap-md)"><tbody>{direct_html}</tbody></table>
       <figure style="margin:var(--gap-xl) 0 0">
         <img src="{img('lapel-pin', 1)}" alt="{t('Enamel lapel pin on slate', '琺瑯襟章')}"
