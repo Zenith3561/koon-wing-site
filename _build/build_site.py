@@ -233,6 +233,9 @@ ICONS = {
 }
 
 
+MAIL = '<a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a>'
+
+
 def TBC():
     return '<span class="tbc">%s</span>' % t("To be confirmed", "待確認")
 
@@ -321,7 +324,7 @@ def footer():
       <div>
         <h4>{t("Get in touch", "聯絡方式")}</h4>
         <ul>
-          <li>{TBC()}</li>
+          <li>{MAIL}</li>
           <li>{t("Hong Kong", "香港")}</li>
           <li><a href="{('zh/' + 'index.html') if LANG == 'en' else '../index.html'}">{t("中文版", "English site")}</a></li>
         </ul>
@@ -787,10 +790,8 @@ def page_partnership():
 
 def page_contact():
     opts = "".join(f"<option>{sname(s)}</option>" for s in SERIES)
-    direct = [("Email", "電郵", TBC()), ("Phone", "電話", TBC()), ("WhatsApp", "WhatsApp", TBC()),
-              ("Address", "地址",
-               t('Hong Kong<br><span class="tbc">Full address to be confirmed</span>',
-                 '香港<br><span class="tbc">詳細地址待確認</span>')),
+    direct = [("Email", "電郵", MAIL),
+              ("Address", "地址", t("Hong Kong", "香港")),
               ("Hours", "辦公時間", t("Monday – Friday, Hong Kong time", "星期一至五，香港時間"))]
     direct_html = "".join(f"<tr><th>{t(a, b)}</th><td>{c}</td></tr>" for a, b, c in direct)
 
@@ -811,7 +812,8 @@ def page_contact():
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">{t("Send an enquiry", "提交查詢")}</h2>
       <p class="form-note" style="margin-top:var(--gap-sm)">{t("Fields marked", "標示")} <em style="color:var(--accent);font-style:normal">*</em> {t("are required.", "的欄位為必填。")}</p>
-      <form action="#" method="post" novalidate>
+      <form id="enquiry" action="mailto:info@koonwingproduct.com.mo" method="post"
+            enctype="text/plain" novalidate>
         <div class="grid-2" style="gap:var(--gap-md)">
           <div class="field"><label for="name">{t("Name", "姓名")} <em>*</em></label>
             <input id="name" name="name" type="text" autocomplete="name" required></div>
@@ -837,7 +839,8 @@ def page_contact():
             placeholder="{t('Describe the piece, or paste a reference link. Budget per unit is helpful.', '描述產品，或貼上參考連結。註明每件預算會更有幫助。')}"></textarea></div>
         <button class="btn btn-primary" type="submit">{t("Send enquiry", "提交查詢")}</button>
         <p class="form-note" style="margin-top:var(--gap-md)">
-          <strong>{t("Note:", "註：")}</strong> {t("this form is not connected yet — the receiving address and mail service still need to be set up before launch.", "此表格尚未接駁——上線前仍須設定收件地址及郵件服務。")}</p>
+          {t("This opens your email app with the details filled in, addressed to", "此表格會開啟您的電郵程式並自動填入內容，收件地址為")}
+          <a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a>{t(". You can also write to us directly.", "。您亦可直接來信。")}</p>
       </form>
     </div>
 

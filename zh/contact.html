@@ -47,7 +47,8 @@
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">提交查詢</h2>
       <p class="form-note" style="margin-top:var(--gap-sm)">標示 <em style="color:var(--accent);font-style:normal">*</em> 的欄位為必填。</p>
-      <form action="#" method="post" novalidate>
+      <form id="enquiry" action="mailto:info@koonwingproduct.com.mo" method="post"
+            enctype="text/plain" novalidate>
         <div class="grid-2" style="gap:var(--gap-md)">
           <div class="field"><label for="name">姓名 <em>*</em></label>
             <input id="name" name="name" type="text" autocomplete="name" required></div>
@@ -73,13 +74,14 @@
             placeholder="描述產品，或貼上參考連結。註明每件預算會更有幫助。"></textarea></div>
         <button class="btn btn-primary" type="submit">提交查詢</button>
         <p class="form-note" style="margin-top:var(--gap-md)">
-          <strong>註：</strong> 此表格尚未接駁——上線前仍須設定收件地址及郵件服務。</p>
+          此表格會開啟您的電郵程式並自動填入內容，收件地址為
+          <a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a>。您亦可直接來信。</p>
       </form>
     </div>
 
     <div>
       <h2 style="font-size:clamp(22px,2.4vw,30px)">直接聯絡</h2>
-      <table class="spec" style="margin-top:var(--gap-md)"><tbody><tr><th>電郵</th><td><span class="tbc">待確認</span></td></tr><tr><th>電話</th><td><span class="tbc">待確認</span></td></tr><tr><th>WhatsApp</th><td><span class="tbc">待確認</span></td></tr><tr><th>地址</th><td>香港<br><span class="tbc">詳細地址待確認</span></td></tr><tr><th>辦公時間</th><td>星期一至五，香港時間</td></tr></tbody></table>
+      <table class="spec" style="margin-top:var(--gap-md)"><tbody><tr><th>電郵</th><td><a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a></td></tr><tr><th>地址</th><td>香港</td></tr><tr><th>辦公時間</th><td>星期一至五，香港時間</td></tr></tbody></table>
       <figure style="margin:var(--gap-xl) 0 0">
         <img src="../assets/products/lapel-pin/01.webp" alt="琺瑯襟章"
              style="border-radius:var(--radius-lg);width:100%;height:auto" loading="lazy"
@@ -112,7 +114,7 @@
       <div>
         <h4>聯絡方式</h4>
         <ul>
-          <li><span class="tbc">待確認</span></li>
+          <li><a href="mailto:info@koonwingproduct.com.mo">info@koonwingproduct.com.mo</a></li>
           <li>香港</li>
           <li><a href="../index.html">English site</a></li>
         </ul>

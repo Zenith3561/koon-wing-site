@@ -19,6 +19,42 @@
     });
   }
 
+  /* ── enquiry form ───────────────────────────────────────────────
+     The site is static, so there is no server to post to. Compose the
+     message in the visitor's own mail app instead, with every field they
+     filled in already laid out — they press send, we get a normal email.
+     The form's plain mailto action is the no-JS fallback.             */
+  var form = document.getElementById('enquiry');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      var get = function (id) {
+        var el = document.getElementById(id);
+        return el ? el.value.trim() : '';
+      };
+      if (!get('name') || !get('email') || !get('msg')) return;  // let the browser complain
+      e.preventDefault();
+
+      var rows = [
+        ['Name', get('name')],
+        ['Company', get('company')],
+        ['Email', get('email')],
+        ['Phone', get('phone')],
+        ['Product', get('product')],
+        ['Quantity', get('qty')],
+        ['Needed by', get('deadline')]
+      ].filter(function (r) { return r[1]; })
+        .map(function (r) { return r[0] + ': ' + r[1]; })
+        .join('\n');
+
+      var body = rows + '\n\n' + get('msg') + '\n';
+      var subject = 'Enquiry from ' + (get('company') || get('name'));
+
+      window.location.href = 'mailto:info@koonwingproduct.com.mo'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+    });
+  }
+
   /* ── gallery filter ─────────────────────────────────────────── */
   var filters = document.querySelectorAll('.filter');
   var shots = document.querySelectorAll('.gallery .shot');
