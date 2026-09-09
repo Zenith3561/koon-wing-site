@@ -79,16 +79,49 @@ The original client logo (`WhatsApp Image 2026-07-29 at 03.18.26.jpeg`, 502×420
 cream background, no transparency) is too low-resolution for web use. If the client can
 supply the vector original, the lockup should be re-cut from it.
 
-## Before launch — outstanding items
+## Live
 
-1. **Contact details** — email, phone, WhatsApp and full address are placeholders
-   (`To be confirmed 待確認`). In `_build/build_site.py`, replace the `TBC` constant.
-2. **Enquiry form** — posts nowhere. Needs a form endpoint (Formspree, Vercel serverless,
-   or a `mailto:` fallback) wired to `<form action>` in `page_contact()`.
-3. **Product specifications** — the "Typical build" and "Options" rows on `products.html`
-   are written as what *can* be specified, not as claims about goods already delivered.
-   The client should still read them and correct anything they would not actually offer.
-4. **Domain** — none registered yet.
+| | |
+|---|---|
+| English | https://koonwingproduct.com.mo |
+| Traditional Chinese | https://koonwingproduct.com.mo/zh/ |
+| Enquiry endpoint | https://form.koonwingproduct.com.mo (Cloudflare Worker `koonwing-enquiry`) |
+| Mailbox | info@koonwingproduct.com.mo (mailcow on mail.zenithacct.com) |
+
+Hosting is GitHub Pages from `Zenith3561/koon-wing-site`; a push to `main`
+rebuilds within about a minute. DNS is Cloudflare, delegated from MONIC.
+
+**Every Cloudflare record for this site must stay DNS-only (grey cloud).**
+Turning the proxy on stops GitHub from seeing the request, and the HTTPS
+certificate silently fails to renew.
+
+## The enquiry form
+
+`contact.html` posts JSON to the Worker, which speaks SMTP on port 465 to
+mailcow as `noreply@koonwingproduct.com.mo` and delivers to `info@`, with the
+sender's address as Reply-To. Port 465 specifically — STARTTLS on 587 hangs
+inside Workers and port 25 is blocked outbound.
+
+Worker source: `../worker/enquiry-worker.js`. Its secrets (SMTP host, user,
+password, destination) are stored on the Worker, not in this repository. If the
+mailbox password changes, redeploy the Worker with the new secret.
+
+If the request fails the page falls back to composing the same message in the
+visitor's mail app, which is also the no-JS path.
+
+## Still outstanding
+
+1. **SOGo does not know this domain yet.** Mail sends and receives normally, but
+   CalDAV/CardDAV returns 401, so desktop clients keep asking for a password.
+   Fix: `ssh root@5.189.167.40`, `cd /opt/mailcow-dockerized`,
+   `docker compose restart sogo-mailcow`. Workaround: turn off calendar and
+   contacts for the account in the mail client.
+2. **Product specifications need the client's eye.** The "typical build" and
+   "options" rows on `products.html` are written as what *can* be specified, not
+   as claims about goods already delivered — but the client should still strike
+   anything they would not actually offer.
+3. **No phone number** — the client chose not to publish one; the row is absent
+   rather than showing a placeholder.
 
 ## Content rules applied
 
